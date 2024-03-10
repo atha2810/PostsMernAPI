@@ -94,6 +94,24 @@ You can test the API endpoints using Postman. Follow these steps to get started:
 3. **Access Protected Routes:**
    - For routes that require authentication, add the JWT token received from the login response to the `auth-token` header of your requests.
 
+### Use of Tokens with Postman or API Testing App
+
+1. **Get a Token**: Obtain a token through your API's authentication process (e.g., login or registration).
+
+2. **Set the Token in Headers**: Copy the token value and set it in the headers of your API request. In Postman, add a header with key `auth-token` and the token value.
+
+3. **Access Protected Routes**: Send your request to a protected route that uses the provided middleware function. The middleware will verify the token and allow access if it's valid. If the token is invalid or missing, it will return an error message.
+
+**Steps:**
+- **Step 1**: Obtain a token through your authentication process.
+- **Step 2**: Copy the token value.
+- **Step 3**: Open Postman or your API testing app.
+- **Step 4**: Create a new request and select the appropriate HTTP method.
+- **Step 5**: Set the request URL to a protected route that uses the middleware.
+- **Step 6**: Add a new header with key `auth-token` and the token value as the header value.
+- **Step 7**: Send the request.
+
+If the token is valid, the request will be processed, and you'll receive the response from the API. If the token is invalid or missing, you'll receive an "Access denied" or "Invalid token" error message.
 4. **CRUD Operations on Posts:**
    - Use the following endpoints for CRUD operations on posts:
      - `GET /posts`: Get all posts.
