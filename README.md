@@ -1,6 +1,6 @@
-# MERN REST(CRUD) API with JWT Authentication
+# DevSnippetsAPI
 
-This is a MERN (MongoDB, Express.js, React.js, Node.js) stack API with JWT (JSON Web Token) authentication. It allows users to register, log in, and perform CRUD operations on posts.
+This is a MERN (MongoDB, Express.js, React.js, Node.js) stack RESTAPI with JWT (JSON Web Token) authentication. It allows users to register, log in, and perform CRUD operations on posts.
 
 ## Description
 This API provides a collection of informative and educational posts authored by Atharva lakhamade, covering various topics in software development. From best practices in code refactoring and unit testing to introductions to RESTful APIs and asynchronous programming in JavaScript, each post offers valuable insights and guidance for developers. The API is a valuable resource for both beginner and experienced developers looking to enhance their skills, learn new concepts, and stay updated with the latest trends in software development.
