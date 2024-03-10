@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevSnippetsAPI</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #c7cbfa;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      p {
+        color: #666;
+      }
+
+      ol {
+        padding-left: 20px;
+      }
+
+      a {
+        color: #d532d5;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to DevSnippetsAPI</h1>
+      <p>
+        Made using NodeJS, ExpressJS, MongoDB.<br /><br />
+        This API provides a collection of informative and educational posts
+        authored by Atharva lakhamade, covering various topics in software
+        development.
+      </p>
+      <h2>Getting Started</h2>
+      <ol>
+        <li>
+          Use ----> /posts <---- after your browser Url to Get all posts From
+          Api.
+        </li>
+        <li>
+          Use ----> /posts:specificPostID <---- after your browser Url to Get a
+          single specific post From Api.
+        </li>
+        <li>
+          Can also Create post or Delete post if you haved Registered or Login
+        </li>
+      </ol>
+      <h2>Registration and Login</h2>
+      <h4>
+        API can be used for User Registration and Login with Postman or any
+        other API testing apps.
+      </h4>
+      <p>
+        <b>Register a User</b><br />
+        Send a POST request to /api/user/register with the following JSON
+        body:<br />
+        { "name": "Your Name", "email": "your@email.com", "password":
+        "yourpassword" }<br />
+        <b>Login</b><br />
+        Send a POST request to /api/user/login with the following JSON body:<br />
+        { "email": "your@email.com", "password": "yourpassword" }
+      </p>
+      <h2>Access Protected Routes</h2>
+      <p>
+        You should receive a response with a JWT token in the
+        <code>auth-token</code> header.
+      </p>
+
+      <h3>For routes that require authentication:</h3>
+      <ul>
+        <li>
+          Add the JWT token received from the login response to the
+          <code>auth-token</code> header of your requests.
+        </li>
+      </ul>
+
+      <h3>Use of Tokens with Postman or API Testing App:</h3>
+      <ol>
+        <li>
+          Obtain a token through your API's authentication process (e.g., login
+          or registration).
+        </li>
+        <li>
+          Copy the token value and set it in the headers of your API request. In
+          Postman, add a header with key <code>auth-token</code> and the token
+          value.
+        </li>
+        <li>
+          Send your request to a protected route that uses the provided
+          middleware function. The middleware will verify the token and allow
+          access if it's valid. If the token is invalid or missing, it will
+          return an error message.
+        </li>
+      </ol>
+
+      <h3>Steps:</h3>
+      <ol>
+        <li>Obtain a token through your authentication process.</li>
+        <li>Copy the token value.</li>
+        <li>Open Postman or your API testing app.</li>
+        <li>Create a new request and select the appropriate HTTP method.</li>
+        <li>
+          Set the request URL to a protected route that uses the middleware.
+        </li>
+        <li>
+          Add a new header with key <code>auth-token</code> and the token value
+          as the header value.
+        </li>
+        <li>Send the request.</li>
+      </ol>
+
+      <h2>CRUD Operations on Posts</h2>
+      <p>Use the following endpoints for CRUD operations on posts:</p>
+      <ul>
+        <li><code>GET /posts</code>: Get all posts.</li>
+        <li><code>POST /posts</code>: Create a new post.</li>
+        <li><code>GET /posts/:postId</code>: Get a specific post by ID.</li>
+        <li>
+          <code>PATCH /posts/:postId</code>: Update a specific post by ID.
+        </li>
+        <li>
+          <code>DELETE /posts/:postId</code>: Delete a specific post by ID.
+        </li>
+      </ul>
+      <h2>API Documentation</h2>
+      <p>
+        For detailed information on how to use the API, refer to the
+        <a href="https://github.com/atha2810/PostsMernAPI" target="_blank"
+          >API documentation</a
+        >.
+      </p>
+    </div>
+  </body>
+</html>

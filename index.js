@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-
+const path = require("path");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const postsRoute = require("./routes/posts");
@@ -15,7 +15,7 @@ app.use("/posts", postsRoute);
 app.use("/api/user", authRoute);
 
 app.get("/", (req, res) => {
-  res.send("Home page Route");
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 dotenv.config(); // or can directly use require('dotenv').config();

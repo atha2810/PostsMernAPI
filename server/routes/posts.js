@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
 });
 
 //submits a post
-router.post("/", async (req, res) => {
+router.post("/", verify, async (req, res) => {
   const post = new Post({
     title: req.body.title,
     content: req.body.content,
@@ -40,7 +40,7 @@ router.get("/:postId", async (req, res) => {
 });
 
 //delete a posts
-router.delete("/:postId", verify, async (req, res) => {
+router.delete("/:postId", async (req, res) => {
   try {
     // Post.remove(req.params.postId); remove is removed xD
     const deletedPost = await Post.deleteOne({ _id: req.params.postId }); //takes obj,
@@ -49,7 +49,7 @@ router.delete("/:postId", verify, async (req, res) => {
     res.json(error);
   }
 });
-// better code or delete
+// better code for delete
 // router.delete("/:postId", async (req, res) => {
 //   try {
 //     const deletedPost = await Post.deleteOne({ _id: req.params.postId });
@@ -63,7 +63,7 @@ router.delete("/:postId", verify, async (req, res) => {
 // });
 
 //update posts
-router.patch("/:postId", verify, async (req, res) => {
+router.patch("/:postId", async (req, res) => {
   try {
     const updatedPost = await Post.updateOne(
       { _id: req.params.postId },
