@@ -4,7 +4,7 @@ const Post = require("../models/Posts");
 const verify = require("../varifyToken");
 
 //gets back ALL the posts
-router.get("/", verify, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const posts = await Post.find();
     res.send(posts);
@@ -14,7 +14,7 @@ router.get("/", verify, async (req, res) => {
 });
 
 //submits a post
-router.post("/", async (req, res) => {
+router.post("/", verify, async (req, res) => {
   const post = new Post({
     title: req.body.title,
     content: req.body.content,
