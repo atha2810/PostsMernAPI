@@ -5,6 +5,22 @@ This is a MERN (MongoDB, Express.js, React.js, Node.js) stack API with JWT (JSON
 ## Description
 This API provides a collection of informative and educational posts authored by Atharva lakhamade, covering various topics in software development. From best practices in code refactoring and unit testing to introductions to RESTful APIs and asynchronous programming in JavaScript, each post offers valuable insights and guidance for developers. The API is a valuable resource for both beginner and experienced developers looking to enhance their skills, learn new concepts, and stay updated with the latest trends in software development.
 
+## API Endpoints
+
+- **POST /api/user/register**: Register a new user.
+  - Request Body: `{ "name": "Your Name", "email": "your@email.com", "password": "yourpassword" }`
+- **POST /api/user/login**: Login with existing credentials.
+  - Request Body: `{ "email": "your@email.com", "password": "yourpassword" }`
+- **GET /posts**: Get all posts.
+![All posts](https://github.com/atha2810/PostsMernAPI/blob/main/Allposts.png?raw=true)
+- **POST /posts**: Create a new post.
+  - Request Body: `{ "title": "Post Title", "content": "Post Content", "author": "Post Author", "imageUrl": "Image URL" }`
+- **GET /posts/:postId**: Get a specific post by ID.
+- ![Specific post by ID]([https://github.com/atha2810/PostsMernAPI/blob/main/Allposts.png?raw=true](https://github.com/atha2810/PostsMernAPI/blob/main/postbyID.png?raw=true))
+- **PATCH /posts/:postId**: Update a specific post by ID.
+  - Request Body: `{ "title": "New Title", "content": "New Content" }`
+- **DELETE /posts/:postId**: Delete a specific post by ID.
+
 ## Reasons to Use the API
 - **Educational Content:** The API offers educational content on a range of software development topics, making it ideal for developers looking to expand their knowledge.
 - **Best Practices:** The posts cover best practices in software development, helping developers write cleaner, more efficient code.
@@ -49,19 +65,7 @@ To get started with this project, follow these steps:
 5. Access the API:
    You can now access the API at `https://postsmernapi.onrender.com`.
 
-## API Endpoints
 
-- **POST /api/user/register**: Register a new user.
-  - Request Body: `{ "name": "Your Name", "email": "your@email.com", "password": "yourpassword" }`
-- **POST /api/user/login**: Login with existing credentials.
-  - Request Body: `{ "email": "your@email.com", "password": "yourpassword" }`
-- **GET /posts**: Get all posts.
-- **POST /posts**: Create a new post.
-  - Request Body: `{ "title": "Post Title", "content": "Post Content", "author": "Post Author", "imageUrl": "Image URL" }`
-- **GET /posts/:postId**: Get a specific post by ID.
-- **PATCH /posts/:postId**: Update a specific post by ID.
-  - Request Body: `{ "title": "New Title", "content": "New Content" }`
-- **DELETE /posts/:postId**: Delete a specific post by ID.
 
 ## Testing with Postman
 You can test the API endpoints using Postman. Follow these steps to get started:
