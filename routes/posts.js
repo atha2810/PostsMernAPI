@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
 });
 
 //submits a post
-router.post("/", verify, async (req, res) => {
+router.post("/", async (req, res) => {
   const post = new Post({
     title: req.body.title,
     content: req.body.content,
