@@ -1,4 +1,4 @@
-# MERN API with JWT Authentication
+# MERN REST(CRUD) API with JWT Authentication
 
 This is a MERN (MongoDB, Express.js, React.js, Node.js) stack API with JWT (JSON Web Token) authentication. It allows users to register, log in, and perform CRUD operations on posts.
 
