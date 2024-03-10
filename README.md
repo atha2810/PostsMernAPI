@@ -47,7 +47,7 @@ To get started with this project, follow these steps:
    ```
 
 5. Access the API:
-   You can now access the API at `http://localhost:3000`.
+   You can now access the API at `[http://localhost:3000](https://postsmernapi.onrender.com)`.
 
 ## API Endpoints
 
