@@ -16,7 +16,7 @@ This API provides a collection of informative and educational posts authored by 
 - **POST /posts**: Create a new post.
   - Request Body: `{ "title": "Post Title", "content": "Post Content", "author": "Post Author", "imageUrl": "Image URL" }`
 - **GET /posts/:postId**: Get a specific post by ID.
-- ![Specific post by ID](https://github.com/atha2810/PostsMernAPI/blob/main/postbyID.png?raw=true)
+- ![Specific post by ID](https://github.com/atha2810/PostsMernAPI/blob/main/SpecificpostbyID.png?raw=true)
 - **PATCH /posts/:postId**: Update a specific post by ID.
   - Request Body: `{ "title": "New Title", "content": "New Content" }`
 - **DELETE /posts/:postId**: Delete a specific post by ID.
